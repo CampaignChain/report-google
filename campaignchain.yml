@@ -1,0 +1,7 @@
+
+modules:
+    campaignchain-google-analytics:
+        display_name: Google Analytics
+        description: Report Data from Google Analytics
+        routes: 
+            index: campaignchain_report_google_analytics_index

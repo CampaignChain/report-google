@@ -1,0 +1,4 @@
+services:
+    campaignchain_report_google.service_client:
+        class: Campaignchain\Report\GoogleBundle\Service\AnalyticsApiClient
+        arguments: [@campaignchain.core.location, @campaignchain.security.authentication.client.oauth.application, @campaignchain.security.authentication.client.oauth.token]

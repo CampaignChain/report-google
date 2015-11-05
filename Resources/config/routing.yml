@@ -1,0 +1,10 @@
+# Please add the routes for your module here
+campaignchain_report_google_analytics_index:
+    pattern: /report/google/analytics/index
+    defaults: { _controller: CampaignchainReportGoogleBundle:GoogleAnalytics:index }
+
+campaignchain_report_google_analytics_report:
+    pattern: /report/google/analytics/report/{locationId}/{campaignId}
+    defaults: { _controller: CampaignchainReportGoogleBundle:GoogleAnalytics:report }
+
+
