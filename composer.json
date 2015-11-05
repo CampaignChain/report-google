@@ -22,18 +22,18 @@
         "google/apiclient": "1.0.*@beta"
     },
     "autoload": {
-        "psr-4": { "Campaignchain\\Report\\GoogleBundle\\": "" }
+        "psr-4": { "CampaignChain\\Report\\GoogleBundle\\": "" }
     },
     "extra": {
         "campaignchain": {
             "kernel": {
                 "classes": [
-                    "Campaignchain\\Report\\GoogleBundle\\CampaignchainReportGoogleBundle"
+                    "CampaignChain\\Report\\GoogleBundle\\CampaignChainReportGoogleBundle"
                 ],
                 "routing":
                 {
                     "name": "campaignchain_report_google",
-                    "resource": "@CampaignchainReportGoogleBundle/Resources/config/routing.yml",
+                    "resource": "@CampaignChainReportGoogleBundle/Resources/config/routing.yml",
                     "prefix": "/"
                 }
             }

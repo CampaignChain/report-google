@@ -1,9 +1,17 @@
 <?php
+/*
+ * This file is part of the CampaignChain package.
+ *
+ * (c) CampaignChain Inc. <info@campaignchain.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
-namespace Campaignchain\Report\GoogleBundle\Controller;
+namespace CampaignChain\Report\GoogleBundle\Controller;
 
 use CampaignChain\CoreBundle\Entity\Campaign;
-use Campaignchain\Location\GoogleBundle\Entity\Profile;
+use CampaignChain\Location\GoogleBundle\Entity\Profile;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,7 +26,7 @@ class GoogleAnalyticsController extends Controller
         $form = $this->createFormBuilder($campaign)
             ->add('locaton', 'entity', array(
                 'label' => 'Profile',
-                'class' => 'CampaignchainLocationGoogleBundle:Profile',
+                'class' => 'CampaignChainLocationGoogleBundle:Profile',
                 'property' => 'displayName',
                 'empty_value' => 'Select a Google Analytics Profile',
                 'empty_data' => null,
@@ -82,7 +90,7 @@ class GoogleAnalyticsController extends Controller
         /** @var Campaign $campaign */
         $campaign = $campaignRepo->findOneById($campaignId);
 
-        $profileRepo = $this->getDoctrine()->getRepository('CampaignchainLocationGoogleBundle:Profile');
+        $profileRepo = $this->getDoctrine()->getRepository('CampaignChainLocationGoogleBundle:Profile');
         /** @var Profile $profile */
         $profile = $profileRepo->findOneById($locationId);
         $location = $profile->getLocation();
@@ -118,7 +126,7 @@ class GoogleAnalyticsController extends Controller
         }
 
         return $this->render(
-            '@CampaignchainReportGoogle/report.html.twig',
+            '@CampaignChainReportGoogle/report.html.twig',
             array(
                 'page_title' => sprintf('Google Analytics for %s on %s', $profile->getDisplayName(), $campaign->getName()),
                 'report_data' => $items

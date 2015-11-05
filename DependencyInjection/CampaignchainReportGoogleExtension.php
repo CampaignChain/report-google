@@ -1,6 +1,14 @@
 <?php
+/*
+ * This file is part of the CampaignChain package.
+ *
+ * (c) CampaignChain Inc. <info@campaignchain.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
-namespace Campaignchain\Report\GoogleBundle\DependencyInjection;
+namespace CampaignChain\Report\GoogleBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +20,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class CampaignchainReportGoogleExtension extends Extension
+class CampaignChainReportGoogleExtension extends Extension
 {
     /**
      * {@inheritdoc}
